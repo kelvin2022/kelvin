@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="restaurant.css" />
+    <style>
+      body {
+        margin: 0;
+        font-size: 28px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      
+      .header {
+          background-color: rgba(224, 188, 188, 0.459);  /* red with opacity */
+        padding: 30px;
+        text-align: center;
+      }
+      
+      #navbar {
+        overflow: hidden;
+        background-color: rgb(121, 105, 105);
+      }
+      
+      #navbar a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+      
+      #navbar a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+      
+      #navbar a.active {
+        background-color: #04AA6D;
+        color: white;
+      }
+      
+      .content {
+        padding: 16px;
+      }
+      
+      .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
+      
+      .sticky + .content {
+        padding-top: 60px;
+      }
+      </style>
+    <style>
+        .container {
+          position: relative;
+          width: 50%;
+        }
+        
+        .image {
+          display: flex;
+          width: 35%;
+          height: 1%;
+        
+        }
+        
+        .overlay {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          
+          background-color: rgba(3, 0, 0, 0.726);  /* red with opacity */
+          overflow: hidden;
+          width: 50%;
+          height: 50%;
+          -webkit-transform: scale(0);
+          -ms-transform: scale(0);
+          transform: scale(0);
+          -webkit-transition: .3s ease;
+          transition: .3s ease;
+        }
+        
+        .container:hover .overlay {
+          -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+          transform: scale(1);
+        }
+        
+        .text {
+          color: white;
+          font-size: 20px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          text-align: center;
+        }
+        </style>
+         
+</head>
+
+<div id="navbar">
+  <a href="hotel.html">HOME</a>
+  <a href="restaurant.html">Restaurant</a>
+  <a href="contact and location.html"> Contact and location</a>
+  <a href="gym and spa.html"> gym and spa</a>
+  <a href="entertainment.html">Entertainment </a>
+  <a href="booking and payments.html">booking and payments </a>
+</div>
+
+<div class="container">
+  <img src="onion.jpg" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text"><b>RESTAURANT</b></div>
+  </div>
+</div>
+<body>
+  
+    <body class="body">
+        <div class="we">
+            
+            <P class="he">Enjoy one of KK HOTELS most enchanting dining experiences in the resort’s atmospheric restaurant. Situated in the traditionally stone-built central reception area, the elegant yet relaxed space enhances each meal with an enchanting fireplace and lake and garden views. Experience vibrant specialties that reflect Tanzanian culture and cooking styles, diverse international dishes to suite every palate and extensive beer, wine and cocktail lists encompassing the finest local and international selections. 
+
+                Breakfast and lunch are presented buffet-style and feature a wide range of international choices. In typical safari style, we offer a full English breakfast as well as European options while our lunch menus will typically include meat, poultry, fish and vegetarian options.
+                
+                Our table d'hôte dinner menus offer a salad buffet, soup, entrée, pudding, cheese and biscuits and tea or coffee. Vegetarian options are always available. The majority of our meat and dairy products as well as our fruits and vegetables are sourced from the communities that surround the reserve. </P>
+            <p class="hea">  </p> 
+       
+            
+              </div>
+              <script>
+                window.onscroll = function() {myFunction()};
+                
+                var navbar = document.getElementById("navbar");
+                var sticky = navbar.offsetTop;
+                
+                function myFunction() {
+                  if (window.pageYOffset >= sticky) {
+                    navbar.classList.add("sticky")
+                  } else {
+                    navbar.classList.remove("sticky");
+                  }
+                }
+                </script>
+</body>
+</html>
